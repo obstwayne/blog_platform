@@ -25,7 +25,7 @@ Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show')
 Route::get('/search', [UserController::class, 'search'])->name('users.search');
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('posts');
 });
 
 Auth::routes();

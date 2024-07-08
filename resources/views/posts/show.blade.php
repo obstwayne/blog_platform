@@ -9,10 +9,10 @@
             <div class="card-body">
                 <h1 class="card-title">{{ $post->title }}</h1>
                 <p class="card-text">{{ $post->content }}</p>
-                <p class="card-text"><small class="text-muted">By {{ $post->user->name }} on {{ $post->created_at->format('M d, Y') }}</small></p>
-                <p class="card-text">Category: {{ $post->category ? $post->category->name : 'None' }}</p>
+                <p class="card-text"><small class="text-muted">Создан {{ $post->user->name }} {{ $post->created_at->format('M d, Y') }}</small></p>
+                <p class="card-text">Категория: {{ $post->category ? $post->category->name : 'По умолчанию' }}</p>
                 <p class="card-text">
-                    Tags:
+                    Теги:
                     @foreach($post->tags as $tag)
                         <span class="badge bg-secondary">{{ $tag->name }}</span>
                     @endforeach
