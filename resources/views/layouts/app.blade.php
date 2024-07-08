@@ -37,6 +37,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Posts') }}</a>
                         </li>
+{{--                        Categories--}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categories') }}</a>
+                        </li>
+{{--                        Tags--}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('tags.index') }}">{{ __('Tags') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
