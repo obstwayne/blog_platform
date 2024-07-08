@@ -22,7 +22,7 @@ Route::put('/profiles/{user}', [ProfileController::class, 'update'])->name('prof
 Route::resource('tags', TagController::class);
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('posts');
 });
 
 Auth::routes();
