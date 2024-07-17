@@ -14,13 +14,14 @@ class CommentController extends Controller
             'content' => 'required',
         ]);
 
-        Comment::create([
+        $post->comments()->create([
             'content' => $request->content,
             'post_id' => $post->id,
             'user_id' => auth()->id(),
         ]);
 
-        return redirect()->route('posts.show', $post);
+        // return redirect()->route('posts.show', $post);
+        return back();
     }
 
     public function destroy(Post $post, Comment $comment)

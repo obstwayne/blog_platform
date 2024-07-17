@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <h1>Controllers</h1>
-        <a href="{{ route('categories.create') }}" class="btn btn-primary mp-3">Create Category</a>
+        <h1>Категории</h1>
+        <a href="{{ route('categories.create') }}" class="btn btn-primary mp-3">Создать новую категорию</a>
 
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -12,8 +12,8 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Actions</th>
+                <th>Название</th>
+                <th>Действия</th>
             </tr>
             </thead>
             <tbody>

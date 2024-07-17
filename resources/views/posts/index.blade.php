@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Записи</h1>
+        <h1>Посты</h1>
 {{--        <a href="{{ redirect()->route('home') }}" class="btn btn-primary">HOME</a>--}}
         <a href="{{ route('posts.create') }}" class="btn btn-primary mp-3">Добавить запись</a>
 

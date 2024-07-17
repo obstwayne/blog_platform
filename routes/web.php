@@ -10,7 +10,7 @@ use App\Http\Controllers\UserController;
 
 Route::resource('posts', PostController::class);
 
-Route::post('post/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::delete('posts/{post}/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 Route::get('/profiles/{user}', [ProfileController::class, 'show'])->name('profiles.show');
@@ -25,7 +25,7 @@ Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show')
 Route::get('/search', [UserController::class, 'search'])->name('users.search');
 
 Route::get('/', function () {
-    return redirect('posts');
+    return view('welcome');
 });
 
 Auth::routes();

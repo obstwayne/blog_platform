@@ -35,7 +35,7 @@
                     <ul class="navbar-nav me-auto">
                         <!-- Link to Posts Page -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Записи') }}</a>
+                            <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Посты') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('tags.index') }}">{{ __('Теги') }}</a>
@@ -44,10 +44,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categories') }}</a>
                         </li>
-{{--                        Tags--}}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('tags.index') }}">{{ __('Tags') }}</a>
-                        </li>
+{{--                        Users--}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
                         </li>

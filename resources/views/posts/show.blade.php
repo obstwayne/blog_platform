@@ -18,6 +18,35 @@
                     @endforeach
                 </p>
             </div>
+
+            <h2>Comments</h2>
+            @foreach ($post->comments as $comment)
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="card-text">{{ $comment->content }}</p>
+                        <p class="card-text"><small class="text-muted">by {{ $comment->user->name }}</small></p>
+                        @can('delete', $comment)
+                            <form action="{{ route('comments.destroy', $comment) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        @endcan
+                    </div>
+                </div>
+
+            @endforeach
+
+            @auth
+            <form action="{{ route('comments.store', $post) }}" method="POST">
+                @csrf
+                <div class="form-group">
+                    <label for="content">Add a comment:</label>
+                    <textarea name="content" id="content" class="form-control" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Post Comment</button>
+            </form>
+        @endauth
         </div>
     </div>
 @endsection

@@ -17,6 +17,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         $posts = $user->posts();
+        // dd($user, $posts);
         return view('users.show', compact('user', 'posts'));
     }
 

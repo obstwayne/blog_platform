@@ -3,8 +3,8 @@
 @section('content')
     <div class="container">
         <h1>{{ $user->name }}</h1>
-        <p>Bio: {{ $user->bio }}</p>
-        <p>Website: <a href="{{ $user->website }}">{{ $user->website }}</a></p>
+        <p>Email: {{ $user->email }}</p>
+        <!-- <p>Website: <a href="{{ $user->website }}">{{ $user->website }}</a></p> -->
 
         <h2>Posts</h2>
         @foreach ($posts as $post)
